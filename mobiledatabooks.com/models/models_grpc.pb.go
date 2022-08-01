@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.19.4
-// source: mobiledatabooks.com/gcp-go-production-grade-grpc/models.proto
+// source: mobiledatabooks.com/models/models.proto
 
-package gcp_go_production_grade_grpc
+package models
 
 import (
 	context "context"
@@ -103,5 +103,5 @@ var Greeter_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "mobiledatabooks.com/gcp-go-production-grade-grpc/models.proto",
+	Metadata: "mobiledatabooks.com/models/models.proto",
 }

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "mobiledatabooks.com/gcp-go-production-grade-grpc";
+option go_package = "mobiledatabooks.com/models";
 
 // package pggrpc;
 
