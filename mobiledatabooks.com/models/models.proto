@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option go_package = "mobiledatabooks.com/models";
+package models;
 
-// package pggrpc;
+option go_package = "mobiledatabooks.com/models";
 
 // The greeting service definition.
 service Greeter {
