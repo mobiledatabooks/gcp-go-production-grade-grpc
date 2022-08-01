@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.19.4
-// source: mobiledatabooks.com/gcp-go-production-grade-grpc/model.proto
+// source: mobiledatabooks.com/gcp-go-production-grade-grpc/models.proto
 
 package gcp_go_production_grade_grpc
 
@@ -36,7 +36,7 @@ func NewGreeterClient(cc grpc.ClientConnInterface) GreeterClient {
 
 func (c *greeterClient) SayHello(ctx context.Context, in *HelloRequest, opts ...grpc.CallOption) (*HelloReply, error) {
 	out := new(HelloReply)
-	err := c.cc.Invoke(ctx, "/pggrpc.Greeter/SayHello", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/Greeter/SayHello", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -82,7 +82,7 @@ func _Greeter_SayHello_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/pggrpc.Greeter/SayHello",
+		FullMethod: "/Greeter/SayHello",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GreeterServer).SayHello(ctx, req.(*HelloRequest))
@@ -94,7 +94,7 @@ func _Greeter_SayHello_Handler(srv interface{}, ctx context.Context, dec func(in
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Greeter_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "pggrpc.Greeter",
+	ServiceName: "Greeter",
 	HandlerType: (*GreeterServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -103,5 +103,5 @@ var Greeter_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "mobiledatabooks.com/gcp-go-production-grade-grpc/model.proto",
+	Metadata: "mobiledatabooks.com/gcp-go-production-grade-grpc/models.proto",
 }
