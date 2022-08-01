@@ -1,4 +1,4 @@
-module github.com/mobiledatabooks/gcp-go-production-grade-grpc
+module github.com/mobiledatabooks/gcp-go-production-grade-grpc/models
 
 go 1.18
 
