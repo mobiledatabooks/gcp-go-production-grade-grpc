@@ -1,5 +1,6 @@
 module github.com/mobiledatabooks/gcp-go-production-grade-grpc/mobiledatabooks.com/models
 
+
 go 1.18
 
 require (
